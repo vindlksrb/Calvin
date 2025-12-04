@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio — Calvin Sahat Tua Dolok Saribu</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1: #0f1226;        
+      --bg2: #1a1f3a;        
+      --accent: #8ab4ff;      
+      --accent-2: #c7a7ff;   
+      --card-bg: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.15);
+      --text: #eaeef7;
+      --muted: #a9b3c7;
+    }
+    html,body{height:100%}
+    body{
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      background: radial-gradient(1200px 800px at 10% 10%, #1f2552 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 90% 20%, #2a1658 0%, transparent 60%),
+                  linear-gradient(160deg, var(--bg1), var(--bg2));
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero{
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-40% -20% auto -20%;
+      height:120%; transform: rotate(8deg);
+      background: radial-gradient(600px 200px at 50% 0%, rgba(138,180,255,0.25), transparent 70%),
+                  radial-gradient(500px 200px at 55% 15%, rgba(199,167,255,0.18), transparent 70%);
+      pointer-events:none;
+    }
+
+    /* Glass card aesthetic */
+    .glass{
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 18px;
+    }
+
+    /* 3D tilt */
+    .tilt{
+      transform-style: preserve-3d;
+      will-change: transform, box-shadow;
+      transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+    }
+    .tilt:hover{
+      box-shadow: 0 14px 30px rgba(0,0,0,0.35), 0 6px 12px rgba(0,0,0,0.25);
+      filter: saturate(1.06);
+    }
+    .tilt .tilt-z{
+      transform: translateZ(28px);
+    }
+    .tilt .tilt-z-2{
+      transform: translateZ(48px);
+    }
+
+    /* Cards & gallery */
+    .card-custom{
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .card-custom img{ object-fit: cover; }
+    .badge-soft{
+      background: linear-gradient(90deg, rgba(138,180,255,.2), rgba(199,167,255,.2));
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* Buttons 3D */
+    .btn-neo{
+      background: linear-gradient(180deg, #3a74ff, #2e57e8);
+      color: #fff; border: 0; border-radius: 12px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),
+                  0 10px 18px rgba(62,103,255,0.35);
+      transform: translateZ(0);
+      transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+    }
+    .btn-neo:hover{ filter: brightness(1.05) }
+    .btn-neo:active{
+      transform: translateY(2px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),
+                  0 6px 12px rgba(62,103,255,0.28);
+    }
+
+    /* Footer subtle */
+    footer{ color: var(--muted) }
+
+    /* Accessibility: matikan animasi jika user minta */
+    @media (prefers-reduced-motion: reduce){
+      .tilt, .tilt *{ transition:none !important }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero py-5">
+    <div class="container text-center">
+      <div class="mx-auto" style="max-width:960px">
+        <span class="badge badge-soft rounded-pill px-3 py-2 mb-3">Portofolio</span>
+        <h1 class="display-5 fw-bold mb-2">Calvin Sahat Tua Dolok Saribu</h1>
+        <p class="lead mb-0 text-white-50">Desainer grafis, UI/UX, dan ilustrasi digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container my-5">
+
+    <!-- BIO: gambar dulu, teks di bawah, semuanya center -->
+    <section class="mb-5 text-center">
+      <div class="row justify-content-center">
+        <div class="col-11 col-md-8 col-lg-6">
+          <div class="glass p-4 p-md-5 tilt">
+            <img src="Calvin.jpg" alt="Foto Calvin" class="rounded-circle shadow-lg mb-4 tilt-z" width="220" height="220" style="object-fit:cover; aspect-ratio:1/1;">
+            <h2 class="fw-bold text-gradient tilt-z-2" style="background:linear-gradient(90deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Tentang Saya</h2>
+            <p class="text-white-50 mb-0">
+              Saya membantu brand bercerita melalui visual yang kuat. Saya menikmati
+              eksplorasi tipografi, warna, dan komposisi agar pesan tersampaikan jelas di setiap medium.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI 3D cards -->
+    <section class="mb-5">
+      <h2 class="fw-bold text-center mb-4">Galeri Proyek</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- 6 item -->
+        <!-- Gunakan .tilt untuk efek 3D -->
+        <!-- Item 1 -->
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-custom h-100 tilt">
+            <img src="" class="card-img-top" alt="Proyek 1">
+            <div class="card-body">
+              <h5 class="card-title tilt-z">Proyek 1</h5>
+              <p class="card-text text-white-50">Desain branding & styleguide.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-custom h-100 tilt">
+            <img src="" class="card-img-top" alt="Proyek 2">
+            <div class="card-body">
+              <h5 class="card-title tilt-z">Proyek 2</h5>
+              <p class="card-text text-white-50">UI kit dan komponen web.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-custom h-100 tilt">
+            <img src="" class="card-img-top" alt="Proyek 3">
+            <div class="card-body">
+              <h5 class="card-title tilt-z">Proyek 3</h5>
+              <p class="card-text text-white-50">Ilustrasi digital tematik.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-custom h-100 tilt">
+            <img src="" class="card-img-top" alt="Proyek 4">
+            <div class="card-body">
+              <h5 class="card-title tilt-z">Proyek 4</h5>
+              <p class="card-text text-white-50">Poster dan materi promosi.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-custom h-100 tilt">
+            <img src="" class="card-img-top" alt="Proyek 5">
+            <div class="card-body">
+              <h5 class="card-title tilt-z">Proyek 5</h5>
+              <p class="card-text text-white-50">Sistem ikon kustom.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 6 -->
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-custom h-100 tilt">
+            <img src="" class="card-img-top" alt="Proyek 6">
+            <div class="card-body">
+              <h5 class="card-title tilt-z">Proyek 6</h5>
+              <p class="card-text text-white-50">Landing page interaktif.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="mb-5">
+      <h2 class="fw-bold text-center mb-4">Kontak</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="glass p-4 p-md-5">
+            <form class="text-start">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="name" placeholder="Nama Anda">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="nama@email.com">
+              </div>
+              <div class="mb-4">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-neo btn-lg">Kirim</button>
+              </div>
+            </form>
+          </div>
+          <p class="text-center mt-3 text-white-50 mb-0">
+            Email: <a class="link-light text-decoration-none" href="mailto:calvinsahattua@gmail.com">calvinsahattua1@gmail.com</a> •
+            Tel: <a class="link-light text-decoration-none" href="tel:+6281234567890">+62 812-6031-1013</a> •
+            Jakarta, Indonesia
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 text-center">
+    <small class="text-white-50">&copy; 2025 Calvin. Semua hak cipta dilindungi.</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Efek 3D/Tilt ringan -->
+  <script>
+    (function(){
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const MAX_TILT = 9;     // derajat
+      const DEPTH = 60;       // kontrol seberapa jauh Z
+
+      function applyTilt(el, e){
+        const rect = el.getBoundingClientRect();
+        const cx = rect.left + rect.width/2;
+        const cy = rect.top  + rect.height/2;
+        const dx = e.clientX - cx;
+        const dy = e.clientY - cy;
+        const rx = ( +MAX_TILT * (dy/ (rect.height/2)));
+        const ry = (-MAX_TILT * (dx/ (rect.width/2)));
+        el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
+      }
+      function resetTilt(el){
+        el.style.transform = "perspective(900px) rotateX(0) rotateY(0) translateZ(0)";
+      }
+
+      document.querySelectorAll('.tilt').forEach(el=>{
+        el.style.transform = "perspective(900px)";
+        el.addEventListener('mousemove', e=>applyTilt(el, e));
+        el.addEventListener('mouseleave', ()=>resetTilt(el));
+        el.addEventListener('touchmove', e=>{
+          if (!e.touches[0]) return;
+          applyTilt(el, {clientX: e.touches[0].clientX, clientY: e.touches[0].clientY});
+        }, {passive:true});
+        el.addEventListener('touchend', ()=>resetTilt(el));
+      });
+
+      // Parallax micro-movement pada hero badge/heading
+      const hero = document.querySelector('.hero');
+      if (hero){
+        hero.addEventListener('mousemove', (e)=>{
+          const r = hero.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top)  / r.height - 0.5;
+          hero.style.backgroundPosition = `${50 + x*2}% ${50 + y*2}%`;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

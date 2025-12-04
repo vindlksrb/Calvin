@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio – Tailwind (Center + Aesthetic + 3D)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light dark" />
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-sky-50 via-white to-indigo-50 text-gray-800 dark:from-slate-900 dark:via-slate-950 dark:to-indigo-950 dark:text-slate-100">
+  <nav class="sticky top-0 z-50 backdrop-blur bg-white/60 dark:bg-slate-900/50 border-b border-slate-200/50 dark:border-slate-800">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-bold tracking-tight text-xl">Portofolio</a>
+      <div class="hidden sm:flex items-center gap-6 text-sm">
+        <a href="#bio" class="opacity-80 hover:opacity-100">Bio</a>
+        <a href="#galeri" class="opacity-80 hover:opacity-100">Galeri</a>
+        <a href="#kontak" class="opacity-80 hover:opacity-100">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home" class="container mx-auto px-4 py-10 md:py-16">
+    <header class="text-center max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Calvin Sahat Tua Dolok Saribu</h1>
+      <p class="mt-3 text-base md:text-lg text-gray-600 dark:text-slate-300">Desainer grafis yang fokus pada branding, UI/UX, dan ilustrasi digital.</p>
+    </header>
+
+    <section id="bio" class="mt-10 md:mt-14">
+      <div class="max-w-xl mx-auto text-center">
+        <div class="relative inline-block">
+          <div class="absolute inset-0 rounded-full blur-2xl bg-gradient-to-tr from-indigo-300 via-sky-300 to-purple-300 opacity-40 dark:opacity-30"></div>
+          <img src="Calvin.jpg" alt="Foto Profil" class="relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-xl ring-4 ring-white/70 dark:ring-slate-800/70">
+        </div>
+        <h2 class="mt-6 text-2xl md:text-3xl font-bold text-indigo-700 dark:text-indigo-300">Tentang Saya</h2>
+        <p class="mt-3 text-gray-700 dark:text-slate-200 leading-relaxed">Saya membantu brand bercerita melalui visual yang kuat. Saya menikmati proses eksplorasi tipografi, warna, dan komposisi agar pesan tersampaikan jelas di setiap medium.</p>
+      </div>
+    </section>
+
+    <section id="galeri" class="mt-14">
+      <h2 class="text-center text-2xl md:text-3xl font-extrabold">Galeri Proyek</h2>
+      <p class="text-center text-gray-600 dark:text-slate-300 mt-2">Hover/gerakkan mouse di kartu untuk melihat efek 3D.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto [perspective:1200px]">
+        <!-- six items will be injected by the next script -->
+      </div>
+    </section>
+
+    <section id="kontak" class="mt-16">
+      <h2 class="text-center text-2xl md:text-3xl font-extrabold">Kontak</h2>
+      <div class="mt-8 max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+        <form class="space-y-4 bg-white/70 dark:bg-slate-900/60 backdrop-blur rounded-2xl p-6 shadow-lg ring-1 ring-slate-200/70 dark:ring-slate-800">
+          <div>
+            <label for="name" class="block text-sm font-bold mb-2">Nama</label>
+            <input id="name" type="text" placeholder="Nama Anda" class="w-full rounded-xl border border-slate-200/70 dark:border-slate-700 bg-white/80 dark:bg-slate-800/70 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-bold mb-2">Email</label>
+            <input id="email" type="email" placeholder="nama@email.com" class="w-full rounded-xl border border-slate-200/70 dark:border-slate-700 bg-white/80 dark:bg-slate-800/70 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-bold mb-2">Pesan</label>
+            <textarea id="message" rows="4" placeholder="Tulis pesan Anda di sini..." class="w-full rounded-xl border border-slate-200/70 dark:border-slate-700 bg-white/80 dark:bg-slate-800/70 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"></textarea>
+          </div>
+          <button type="submit" class="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:scale-[.98] transition">Kirim</button>
+        </form>
+        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur rounded-2xl p-6 shadow-lg ring-1 ring-slate-200/70 dark:ring-slate-800">
+          <h5 class="text-lg font-bold">Info Kontak</h5>
+          <ul class="mt-3 space-y-1 text-gray-700 dark:text-slate-300">
+            <li><span class="font-semibold">Email:</span> calvinsahattua1@gmail.com</li>
+            <li><span class="font-semibold">Telepon:</span> +62 812-6031-1013</li>
+            <li><span class="font-semibold">Lokasi:</span> Jakarta, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 text-center text-sm text-gray-500 dark:text-slate-400">
+    <small>&copy; 2025 Calvin. Semua hak cipta dilindungi.</small>
+  </footer>
+
+  <script>
+    const grid = document.querySelector('#galeri .grid');
+    const item = (i) => `
+      <article class="group tilt bg-white/70 dark:bg-slate-900/60 backdrop-blur rounded-2xl shadow-lg ring-1 ring-slate-200/70 dark:ring-slate-800 overflow-hidden transform-gpu transition will-change-transform">
+        <div class="overflow-hidden">
+          <img src="https://picsum.photos/seed/project${i}/600/400" alt="Proyek ${i}" class="w-full h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Proyek ${i}</h3>
+          <p class="text-sm text-gray-600 dark:text-slate-300">Deskripsi singkat proyek ${i}.</p>
+        </div>
+      </article>`;
+    grid.innerHTML = Array.from({length: 6}, (_,i)=>item(i+1)).join('\n');
+  </script>
+
+  <script>
+    const cards = document.querySelectorAll('.tilt');
+    const clamp = (n, min, max) => Math.max(min, Math.min(n, max));
+    cards.forEach(card => {
+      const damp = 20;
+      const reset = () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0)';
+        card.style.boxShadow = '';
+      };
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        const dx = e.clientX - cx;
+        const dy = e.clientY - cy;
+        const rx = clamp((-dy / damp), -10, 10);
+        const ry = clamp((dx / damp), -10, 10);
+        card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
+        card.style.boxShadow = `0 25px 60px -12px rgba(0,0,0,.25)`;
+      });
+      card.addEventListener('mouseleave', reset);
+      card.addEventListener('blur', reset);
+    });
+  </script>
+</body>
+</html>
